@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Luthfi45120 Links</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Rubik', sans-serif;
+      background: radial-gradient(circle at center, #0d0d0d 20%, #000000 100%);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      overflow: hidden;
+      animation: fadeInBody 1s ease-out;
+      perspective: 1000px;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(0, 255, 255, 0.03) 0,
+        rgba(0, 255, 255, 0.03) 1px,
+        transparent 1px,
+        transparent 20px
+      );
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .lightning {
+      position: absolute;
+      width: 1400px;
+      height: 1400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,255,255,0.06), transparent 75%);
+      mix-blend-mode: screen;
+      animation: lightningSpin 8s linear infinite, hueShift 6s ease-in-out infinite;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: brightness(1) blur(12px);
+    }
+
+    @keyframes lightningSpin {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    @keyframes hueShift {
+      0% { filter: hue-rotate(0deg) brightness(1); }
+      50% { filter: hue-rotate(180deg) brightness(1.05); }
+      100% { filter: hue-rotate(360deg) brightness(1); }
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+      width: 92%;
+      max-width: 400px;
+      animation: fadeInContainer 1.5s ease-in-out;
+      position: relative;
+      z-index: 3;
+      backdrop-filter: blur(15px) saturate(1.2);
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 1.5rem 1rem;
+        width: 95%;
+      }
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes fadeInContainer {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 1rem;
+      border-radius: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 25px rgba(0,255,255,0.15);
+      backdrop-filter: blur(10px);
+      padding: 0.5rem;
+      filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.2));
+      animation: logoPop 1s ease-in-out;
+    }
+
+    @keyframes logoPop {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      color: #ffffff;
+    }
+
+    .link {
+      display: block;
+      background: rgba(255, 255, 255, 0.1);
+      margin: 0.5rem 0;
+      padding: 0.8rem 1rem;
+      border-radius: 12px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+
+    .link:hover {
+      background: rgba(0, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .link::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.08);
+      transition: left 0.4s ease;
+    }
+
+    .link:hover::before {
+      left: 0;
+    }
+
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .footer span {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scrollFooterText 20s linear infinite;
+      font-family: 'Rubik', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    }
+
+    @keyframes scrollFooterText {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body>
+  <div class="lightning"></div>
+  <div class="container">
+    <img src="IMG_7800.PNG" alt="Logo Luthfi" class="logo">
+    <h1>Luthfi45120</h1>
+    <a class="link" href="https://www.youtube.com/@Luthfi45120" target="_blank">YouTube</a>
+    <a class="link" href="https://www.instagram.com/luthfi.45120/" target="_blank">Instagram</a>
+    <a class="link" href="https://web.facebook.com/Luthfi45120" target="_blank">Facebook</a>
+    <a class="link" href="https://wa.me/628816527987" target="_blank">WhatsApp</a>
+    <a class="link" href="http://shopee.co.id/luthfi.45120" target="_blank">Shopee</a>
+    <a class="link" href="https://www.tiktok.com/@lutcyfus" target="_blank">TikTok</a>
+    <a class="link" href="https://saweria.co/Luthfi45120" target="_blank">Saweria</a>
+    <div class="footer">
+      <span>📌 Made with 💙 by Luthfi45120 ✨ Follow & Connect 📱 Support my content 🙌 Thanks for visiting</span>
+    </div>
+  </div>
+
+  <script>
+    // 3D hover effect for container
+    document.addEventListener("mousemove", (e) => {
+      const container = document.querySelector(".container");
+      const rect = container.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = -(y - centerY) / 20;
+      const rotateY = (x - centerX) / 20;
+      container.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    document.addEventListener("mouseleave", () => {
+      const container = document.querySelector(".container");
+      container.style.transform = "rotateX(0deg) rotateY(0deg)";
+    });
+
+    document.querySelector(".container").style.transition = "transform 0.1s ease-out";
+  </script>
+
+</body>
+</html>
