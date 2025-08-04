@@ -120,8 +120,6 @@
       font-size: 2rem;
       margin-bottom: 1.2rem;
       color: #ffffff;
-      opacity: 1;
-      transition: opacity 1s ease;
     }
 
     .link {
@@ -170,6 +168,7 @@
       display: inline-block;
       white-space: nowrap;
       animation: scrollFooterText 20s linear infinite;
+      font-family: 'Rubik', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     }
 
     @keyframes scrollFooterText {
@@ -177,24 +176,6 @@
       100% { transform: translateX(-100%); }
     }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const heading = document.querySelector("h1");
-      const names = ["Luthfi45120", "Lutcyfus"];
-      let index = 0;
-
-      function fadeChange() {
-        heading.style.opacity = 0;
-        setTimeout(() => {
-          heading.textContent = names[index];
-          heading.style.opacity = 1;
-          index = (index + 1) % names.length;
-        }, 1000);
-      }
-
-      setInterval(fadeChange, 5000);
-    });
-  </script>
 </head>
 <body>
   <div class="lightning"></div>
@@ -204,35 +185,36 @@
     <a class="link" href="https://www.youtube.com/@Luthfi45120" target="_blank">YouTube</a>
     <a class="link" href="https://www.instagram.com/luthfi.45120/" target="_blank">Instagram</a>
     <a class="link" href="https://web.facebook.com/Luthfi45120" target="_blank">Facebook</a>
-    <a class="link" href="http://wa.me/628816527987" target="_blank">WhatsApp</a>
+    <a class="link" href="https://wa.me/628816527987" target="_blank">WhatsApp</a>
     <a class="link" href="http://shopee.co.id/luthfi.45120" target="_blank">Shopee</a>
     <a class="link" href="https://www.tiktok.com/@lutcyfus" target="_blank">TikTok</a>
     <a class="link" href="https://saweria.co/Luthfi45120" target="_blank">Saweria</a>
     <div class="footer">
-      <span>東 Made with 貯 by Luthfi45120 笨ｨ Follow & Connect 導 Support my content 剏 Thanks for visiting</span>
+      <span>📌 Made with 💙 by Luthfi45120 ✨ Follow & Connect 📱 Support my content 🙌 Thanks for visiting</span>
     </div>
   </div>
 
-<script>
-  document.addEventListener("mousemove", (e) => {
-    const container = document.querySelector(".container");
-    const rect = container.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    const rotateX = -(y - centerY) / 20;
-    const rotateY = (x - centerX) / 20;
-    container.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-  });
+  <script>
+    // 3D hover effect for container
+    document.addEventListener("mousemove", (e) => {
+      const container = document.querySelector(".container");
+      const rect = container.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = -(y - centerY) / 20;
+      const rotateY = (x - centerX) / 20;
+      container.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
 
-  document.addEventListener("mouseleave", () => {
-    const container = document.querySelector(".container");
-    container.style.transform = "rotateX(0deg) rotateY(0deg)";
-  });
+    document.addEventListener("mouseleave", () => {
+      const container = document.querySelector(".container");
+      container.style.transform = "rotateX(0deg) rotateY(0deg)";
+    });
 
-  document.querySelector(".container").style.transition = "transform 0.1s ease-out";
-</script>
+    document.querySelector(".container").style.transition = "transform 0.1s ease-out";
+  </script>
 
 </body>
 </html>
